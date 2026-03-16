@@ -2,7 +2,7 @@
 
 ## Overview
 
-StellarLend smart contracts are written in Rust using the Soroban SDK. They handle all core protocol logic including lending pools, loans, and liquidations.
+Collaterix smart contracts are written in Rust using the Soroban SDK. They handle all core protocol logic including lending pools, loans, and liquidations.
 
 ## Contract Interface
 
@@ -414,10 +414,10 @@ Events for off-chain indexing:
 ## Integration Example
 
 ```rust
-use stellar_lend::StellarLendClient;
+use collaterix::CollaterixClient;
 
 // Create client
-let client = StellarLendClient::new(&env, &contract_id);
+let client = CollaterixClient::new(&env, &contract_id);
 
 // Supply liquidity
 client.supply(&supplier, &asset, &1000000);

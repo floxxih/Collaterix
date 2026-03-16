@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 from enum import Enum
 
-app = FastAPI(title="StellarLend API", version="0.1.0")
+app = FastAPI(title="Collaterix API", version="0.1.0")
 
 # CORS middleware
 app.add_middleware(
@@ -68,7 +68,7 @@ class UserPositionResponse(BaseModel):
 @app.get("/")
 async def root():
     return {
-        "name": "StellarLend API",
+        "name": "Collaterix API",
         "version": "0.1.0",
         "description": "Decentralized lending protocol on Stellar"
     }

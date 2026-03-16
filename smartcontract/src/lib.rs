@@ -1,21 +1,21 @@
 #![no_std]
 
 mod error;
-mod types;
-mod storage;
-mod pool;
 mod loan;
+mod pool;
+mod storage;
+mod types;
 
 use soroban_sdk::{contract, contractimpl, Address, Env};
 
 use crate::error::Error;
-use crate::types::{Loan, LendingPool, UserPosition};
+use crate::types::{LendingPool, Loan, UserPosition};
 
 #[contract]
-pub struct StellarLend;
+pub struct Collaterix;
 
 #[contractimpl]
-impl StellarLend {
+impl Collaterix {
     /// Initialize the lending protocol
     pub fn init(env: Env, admin: Address) -> Result<(), Error> {
         if storage::has_admin(&env) {
@@ -26,12 +26,7 @@ impl StellarLend {
     }
 
     /// Supply liquidity to a lending pool
-    pub fn supply(
-        env: Env,
-        supplier: Address,
-        asset: Address,
-        amount: i128,
-    ) -> Result<(), Error> {
+    pub fn supply(env: Env, supplier: Address, asset: Address, amount: i128) -> Result<(), Error> {
         supplier.require_auth();
         pool::supply_liquidity(&env, &supplier, &asset, amount)
     }

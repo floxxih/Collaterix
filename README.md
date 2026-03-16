@@ -1,14 +1,14 @@
-# StellarLend
+# Collaterix
 
 > **Decentralized lending protocol on Stellar with collateralized loans**
 
 ```
-  ____  _       _ _            _                    _ 
- / ___|| |_ ___| | | __ _ _ __| |    ___ _ __   __| |
- \___ \| __/ _ \ | |/ _` | '__| |   / _ \ '_ \ / _` |
-  ___) | ||  __/ | | (_| | |  | |__|  __/ | | | (_| |
- |____/ \__\___|_|_|\__,_|_|  |_____\___|_| |_|\__,_|
-                                                      
+   ____      _ _       _            _      
+  / ___|___ | | | __ _| |_ ___ _ __(_)_  __
+ | |   / _ \| | |/ _` | __/ _ \ '__| \ \/ /
+ | |__| (_) | | | (_| | ||  __/ |  | |>  < 
+  \____\___/|_|_|\__,_|\__\___|_|  |_/_/\_\
+                                           
 ```
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -24,7 +24,7 @@ Traditional lending requires trust and intermediaries:
 
 ## The Solution
 
-StellarLend is a **decentralized lending protocol** where:
+Collaterix is a **decentralized lending protocol** where:
 - Loans are **secured by collateral** in Soroban smart contracts
 - **Permissionless**: Anyone can lend or borrow
 - **Transparent**: All terms encoded on-chain
@@ -61,7 +61,7 @@ StellarLend is a **decentralized lending protocol** where:
 ┌─────────────────────────────────────────────────────────────────┐
 │                   SOROBAN SMART CONTRACTS                        │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │                  StellarLend Protocol                     │   │
+│  │                  Collaterix Protocol                       │   │
 │  │  • init()          • supply()        • withdraw()        │   │
 │  │  • borrow()        • repay()         • liquidate()       │   │
 │  │  • get_loan()      • get_pool()      • check_health()    │   │
@@ -136,15 +136,15 @@ StellarLend is a **decentralized lending protocol** where:
 
 ```bash
 # Clone the repository
-git clone https://github.com/floxxih/StellarLend.git
-cd StellarLend
+git clone https://github.com/floxxih/Collaterix.git
+cd Collaterix
 
 # Setup Smart Contracts
 cd smartcontract
 cargo build --release --target wasm32-unknown-unknown
 
 # Deploy to testnet
-soroban contract deploy --wasm target/wasm32-unknown-unknown/release/stellar_lend.wasm --network testnet
+soroban contract deploy --wasm target/wasm32-unknown-unknown/release/collaterix.wasm --network testnet
 
 # Setup Frontend
 cd ../frontend

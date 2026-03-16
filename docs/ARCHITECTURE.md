@@ -1,8 +1,8 @@
-# StellarLend Architecture
+# Collaterix Architecture
 
 ## Overview
 
-StellarLend is a decentralized lending protocol built on Stellar's Soroban smart contract platform. It enables permissionless lending and borrowing with collateralized loans.
+Collaterix is a decentralized lending protocol built on Stellar's Soroban smart contract platform. It enables permissionless lending and borrowing with collateralized loans.
 
 ## System Components
 
@@ -10,7 +10,7 @@ StellarLend is a decentralized lending protocol built on Stellar's Soroban smart
 
 The core protocol logic lives in Soroban smart contracts:
 
-#### Main Contract: `StellarLend`
+#### Main Contract: `Collaterix`
 - **Initialization**: Set up protocol admin
 - **Pool Management**: Handle liquidity pools per asset
 - **Loan Management**: Create, track, and manage loans

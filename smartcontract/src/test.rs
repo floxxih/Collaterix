@@ -6,8 +6,8 @@ use soroban_sdk::{testutils::Address as _, Address, Env};
 #[test]
 fn test_initialization() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, StellarLend);
-    let client = StellarLendClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, Collaterix);
+    let client = CollaterixClient::new(&env, &contract_id);
 
     let admin = Address::generate(&env);
     client.init(&admin);
@@ -18,8 +18,8 @@ fn test_initialization() {
 #[test]
 fn test_supply_and_withdraw() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, StellarLend);
-    let client = StellarLendClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, Collaterix);
+    let client = CollaterixClient::new(&env, &contract_id);
 
     let admin = Address::generate(&env);
     let supplier = Address::generate(&env);
@@ -36,8 +36,8 @@ fn test_supply_and_withdraw() {
 #[test]
 fn test_borrow_with_collateral() {
     let env = Env::default();
-    let contract_id = env.register_contract(None, StellarLend);
-    let client = StellarLendClient::new(&env, &contract_id);
+    let contract_id = env.register_contract(None, Collaterix);
+    let client = CollaterixClient::new(&env, &contract_id);
 
     let admin = Address::generate(&env);
     let borrower = Address::generate(&env);
