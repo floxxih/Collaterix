@@ -13,6 +13,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Built on Stellar](https://img.shields.io/badge/Built%20on-Stellar%20Soroban-purple)](https://soroban.stellar.org)
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/floxxih/Collaterix/ci.yml?branch=master&label=CI%2FCD)](https://github.com/floxxih/Collaterix/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/floxxih/Collaterix?label=Coverage)](https://codecov.io/gh/floxxih/Collaterix)
+[![Version](https://img.shields.io/github/v/release/floxxih/Collaterix?label=Version)](https://github.com/floxxih/Collaterix/releases)
+[![Stellar Network](https://img.shields.io/badge/Network-Stellar%20Testnet-brightgreen)](https://stellar.org)
 
 ## The Problem
 
